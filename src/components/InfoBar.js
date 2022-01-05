@@ -4,8 +4,9 @@ import { connect } from 'react-redux'
  class InfoBar extends Component {
   render() {
     return (
-      <div>
-        <input ></input>
+      <div id='infoBar'>
+        <input></input>
+        <button type='submit'>enviar</button>
         <select>
         <option>laranja</option>
         <option>laranja</option>

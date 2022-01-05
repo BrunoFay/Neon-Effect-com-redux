@@ -44,6 +44,7 @@ img{
   cursor: pointer;
   position: absolute;
   right:9vw;
+  top:43vh
 }
 .neon-button {
   font-size: 4rem;
@@ -88,6 +89,17 @@ img{
   background-color: var(--clr-neon);
   z-index: -1;
   transition: opacity 100ms linear;
+}
+#infoBar{
+  position: absolute;
+top:10vh;
+left: 40vw;
+}
+#infoBar > input{
+  width: 20vw;
+}
+#infoBar > select{
+  margin-left: 1em;
 }
 
 .neon-button:hover,
