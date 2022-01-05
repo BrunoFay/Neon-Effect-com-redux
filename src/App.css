@@ -29,11 +29,13 @@ justify-content: space-evenly;
 
 }
 
-.blur{
-  transform: perspective(6em) rotateY(40deg) scale(3, 4.35);
+#blur{
+  transform: perspective(6em) rotateY(70deg) ;
   filter: blur(0.9px);
   text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 5.45em currentColor;
-  margin-left: 8vh;
+ left: 4em;
+  font-size: 4rem;
+  position: absolute;
   
 }
 img{
