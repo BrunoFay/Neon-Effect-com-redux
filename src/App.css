@@ -21,22 +21,32 @@ justify-content: space-evenly;
  
 }
 
-.trybe,#trybe{
+.neonLightBlur{
   transform: perspective(7em) rotateY(40deg) scale(3, 1.35);
   color:var(--clr-neon);
-   filter: blur(1em);
+   filter: blur(0.8em);
    
 
 }
-
+#lightFlashlight{
+  font-size: x-large;
+  position: relative;
+  left: 8em;
+  top:2em ;
+}
 #blur{
   transform: perspective(6em) rotateY(70deg) ;
   filter: blur(0.9px);
   text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 5.45em currentColor;
- left: 4em;
-  font-size: 4rem;
+ left: 1em;
+  font-size: 6em;
   position: absolute;
   
+}
+#lightNeon{
+  position: absolute;
+left: 23em;
+bottom: 43%;
 }
 img{
   transform: rotate(225deg);
@@ -45,7 +55,7 @@ img{
   height: 30%;
   cursor: pointer;
   position: absolute;
-  right:9vw;
+  right:20vw;
   top:43vh
 }
 .neon-button {
