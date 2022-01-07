@@ -1,6 +1,6 @@
 
 import { combineReducers } from 'redux'
-const INITIAL_STATE ={name:'Trybe',color:'',blur:'ssssssssssssssssssssss',flashlight:false}
+const INITIAL_STATE ={name:'Open',color:'',blur:'ssssssssssssssssssssss',flashlight:false}
 function neonReducer(state=INITIAL_STATE,action){
  /* switch(action.type){
   case NEON_COLOR:
