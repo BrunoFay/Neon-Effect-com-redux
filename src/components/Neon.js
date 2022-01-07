@@ -13,15 +13,16 @@ class Neon extends Component {
 
   neonLogical = () => {
     const { Neoncolor, neonName, dispatch } = this.props
-    const neonStart = neonName.length > 0 ? neonName : 'OPEN'
+    //const neonStart = neonName.length > 0 ? neonName : 'OPEN'
     const catchLightNeon = document.getElementById('lightNeon')
     const catchLightFlashlight = document.getElementById('lightFlashlight')
     const catchBLur = document.getElementById('blur')
+    const sucessTrick = neonName === 'sucesso' ? 'Trybe' : neonName
     /* alterar a variavel do css */
     document.body.style.setProperty('--clr-neon', `${Neoncolor}`);
 
     catchBLur.className = 'blur'
-    catchBLur.innerHTML === '' ? catchBLur.innerHTML = neonStart : catchBLur.innerHTML = ''
+    catchBLur.innerHTML === '' ? catchBLur.innerHTML = sucessTrick : catchBLur.innerHTML = ''
     catchLightNeon.className = 'neonLightBlur'
     catchLightFlashlight.className = 'neonLightBlur'
     this.setState(prevState => ({
@@ -32,6 +33,7 @@ class Neon extends Component {
 
   render() {
     const { neonName, neonBlur, neonFlashlight } = this.props
+
     return (
       <main>
         <span id='blur'></span>
