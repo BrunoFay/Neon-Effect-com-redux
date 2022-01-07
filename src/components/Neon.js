@@ -32,7 +32,6 @@ class Neon extends Component {
 
   render() {
     const { neonName, neonBlur, neonFlashlight } = this.props
-    const { flashlight } = this.state
     return (
       <main>
         <span id='blur'></span>

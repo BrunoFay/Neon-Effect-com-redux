@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className="App">
-     <spam id='title'>Neon Effect</spam>
+      <span id='title'>Neon Effects</span>
       <InfoBar />
       <Neon />
     </div>

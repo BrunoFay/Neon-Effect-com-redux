@@ -5,6 +5,83 @@
   --clr-bg: hsl(303 2% 16%);
 }
 
+@media screen and (min-width: 320px) and (max-width: 1023px) {
+  body {}
+
+  input {
+    width: 13em;
+    margin-top: 18.5%;
+  }
+
+  button {
+    top: 2.56em;
+  }
+
+  #infoBar {
+    top: 10vh;
+    left: 20vw;
+  }
+
+  .neon-button {
+    font-size: 3em;
+    position: absolute;
+    left: 30vw;
+    top: 40vh
+  }
+
+  #blur, #lightNeon, img, #lightFlashlight {
+    display: none;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  body {}
+
+  #infoBar {
+    top: 19vh;
+    left: 40vw;
+  }
+
+  .neon-button {
+    font-size: 4em;
+    position: absolute;
+    left: 40vw;
+    top: 40vh;
+  }
+
+  #blur {
+    transform: perspective(6em) rotateY(70deg);
+    filter: blur(0.9px);
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 5.45em currentColor;
+    left: 1em;
+    font-size: 6em;
+    position: absolute;
+    top: 40vh;
+  }
+
+  #lightNeon {
+    position: absolute;
+    left: 23em;
+    bottom: 50%;
+
+  }
+
+  img {
+    transform: rotate(225deg);
+    object-fit: contain;
+    width: 10%;
+    height: 30%;
+    cursor: pointer;
+    position: absolute;
+    right: 10vw;
+    top: 34vh
+  }
+
+
+}
+
+
 *,
 *::before,
 *::after {
@@ -13,35 +90,24 @@
 
 /* input */
 input {
-  margin-top: 15%;
+
   border: none;
   font-size: inherit;
-  transition: width 200ms;
-  padding-top: 5px;
-  padding-left: 5px;
-  padding-bottom: 5px;
-  width: 55px;
+  height: 29.5px;
   color: rgb(27, 27, 27);
   border-bottom: 1px solid #eee;
 }
 
-input:focus {
-  width: 150px;
-}
+
 
 button {
   border: none;
   font-size: 1.3em;
-  color: rgb(32, 30, 30);
+  color: rgb(224, 209, 209);
   background-color: rgb(112, 88, 88);
   transition: color 200ms;
- height: 1.4em;
- top: 2.55em;
- position: absolute;
-}
-
-input:hover, button:hover {
-  cursor: pointer;
+  height: 1.4em;
+  position: absolute;
 }
 
 input:focus, button:focus {
@@ -51,12 +117,11 @@ input:focus, button:focus {
 button:hover {
   color: #3498db;
 }
+
 /* animação title */
-#title {
-
+#title{
   text-align: center;
-  font-size: 100px;
-
+  font-size: clamp(5em, 100px, 2em);
   background: -webkit-linear-gradient(rgb(155, 111, 111), rgb(52, 98, 223));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -75,14 +140,31 @@ button:hover {
 
 body {
   display: flex;
-
   justify-content: space-evenly;
   place-items: center;
-  background: var(--clr-bg);
   font-family: 'Balsamiq Sans', cursive;
   color: var(--clr-neon);
-
+  background: var(--clr-bg);
 }
+
+#infoBar {
+  position: absolute;
+}
+
+#infoBar select {
+  margin-left: 1em;
+  background: whitesmoke;
+  /* importante para exibir o novo ícone */
+  color: rgb(73, 70, 70);
+  width: 68px;
+  padding: 1px;
+  line-height: 1;
+  border: none;
+  border-radius: 0;
+  height: 2.2em;
+  outline: none;
+}
+
 /* neon effects 
 referencia https://youtu.be/6xNcXwC6ikQ*/
 .neonLightBlur {
@@ -94,44 +176,14 @@ referencia https://youtu.be/6xNcXwC6ikQ*/
 #lightFlashlight {
   font-size: x-large;
   position: relative;
-  left: 19em;
-  top: 8em;
+  left: 16.2em;
+  top: 9em;
 
 }
 
-#blur {
-  transform: perspective(6em) rotateY(70deg);
-  filter: blur(0.9px);
-  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 5.45em currentColor;
-  left: 1em;
-  font-size: 6em;
-  position: absolute;
-  top: 40vh;
-}
-
-#lightNeon {
-  position: absolute;
-  left: 23em;
-  bottom: 50%;
-
-}
-
-img {
-  transform: rotate(225deg);
-  object-fit: contain;
-  width: 10%;
-  height: 30%;
-  cursor: pointer;
-  position: absolute;
-  right: 10vw;
-  top: 34vh
-}
 
 .neon-button {
-  font-size: 4rem;
-  position: absolute;
-  left: 40vw;
-  top: 40vh;
+
   cursor: pointer;
   text-decoration: none;
   color: var(--clr-neon);
@@ -175,35 +227,11 @@ img {
   transition: opacity 100ms linear;
 }
 
-#infoBar {
-  position: absolute;
-  top: 10vh;
-  left: 35vw;
-}
 
-#infoBar>input {
-  width: 20vw;
-}
-
-#infoBar select {
-  margin-left: 1em;
-  background: whitesmoke; /* importante para exibir o novo ícone */
-  color: rgb(73, 70, 70);
-  width: 68px;
-  padding: 1px;
-  line-height: 1;
-  border: none;
-  border-radius: 0;
-  height: 2.2em;
-
-  outline: none;
-}
 
 .neon-button:hover,
 .neon-button:focus {
   color: var(--clr-bg);
-  text-shadow: none;
- 
 }
 
 .neon-button:hover::before,
