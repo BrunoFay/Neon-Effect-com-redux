@@ -8,18 +8,20 @@
 @media screen and (min-width: 320px) and (max-width: 1023px) {
   body {}
 
-  input {
+  .nameInput {
     width: 13em;
     margin-top: 18.5%;
   }
 
   button {
-    top: 2.56em;
+    position: inherit;
+    top: 2.32em
   }
 
   #infoBar {
-    top: 10vh;
-    left: 20vw;
+    position:absolute;
+    top: 15vh;
+    left: 2vw;
   }
 
   .neon-button {
@@ -32,12 +34,16 @@
   #blur, #lightNeon, img, #lightFlashlight {
     display: none;
   }
-
+  .colorInput{
+    
+  }
 }
 
 @media screen and (min-width: 1024px) {
   body {}
-
+button{
+  top:6.1em
+}
   #infoBar {
     top: 19vh;
     left: 40vw;
@@ -49,7 +55,9 @@
     left: 40vw;
     top: 40vh;
   }
-
+  #title{
+    margin-left: 1em;
+  }
   #blur {
     transform: perspective(6em) rotateY(70deg);
     filter: blur(0.9px);
@@ -85,15 +93,15 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  
 }
 
 /* input */
-input {
+.nameInput{
 
   border: none;
   font-size: inherit;
-  height: 29.5px;
+  height: 25.5px;
   color: rgb(27, 27, 27);
   border-bottom: 1px solid #eee;
 }
@@ -108,9 +116,10 @@ button {
   transition: color 200ms;
   height: 1.4em;
   position: absolute;
+  
 }
 
-input:focus, button:focus {
+.nameInput:focus, button:focus {
   outline: none;
 }
 
@@ -148,21 +157,16 @@ body {
 }
 
 #infoBar {
-  position: absolute;
+  margin: 30px 6em;
+  
+  width: auto;
+  
 }
 
-#infoBar select {
-  margin-left: 1em;
-  background: whitesmoke;
-  /* importante para exibir o novo ícone */
+#infoBar .colorInput{
   color: rgb(73, 70, 70);
-  width: 68px;
   padding: 1px;
-  line-height: 1;
-  border: none;
-  border-radius: 0;
-  height: 2.2em;
-  outline: none;
+  height: 2em;
 }
 
 /* neon effects 

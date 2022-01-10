@@ -20,7 +20,6 @@ class Neon extends Component {
     const sucessTrick = neonName === 'sucesso' ? 'Trybe' : neonName
     /* alterar a variavel do css */
     document.body.style.setProperty('--clr-neon', `${Neoncolor}`);
-
     catchBLur.className = 'blur'
     catchBLur.innerHTML === '' ? catchBLur.innerHTML = sucessTrick : catchBLur.innerHTML = ''
     catchLightNeon.className = 'neonLightBlur'

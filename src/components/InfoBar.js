@@ -25,8 +25,8 @@ class InfoBar extends Component {
     
     return (
       <div id='infoBar'>
-        
-        <select name='Neoncolor' onChange={(e) => this.handleChange(e)}>
+        <input className='colorInput' name='Neoncolor' onChange={(e) => this.handleChange(e)} type='color'></input>
+      {/*   <select name='Neoncolor' onChange={(e) => this.handleChange(e)}>
           <option value='rgb(50, 153, 153)'>Azul</option>
           <option value='orange'>Laranja</option>
           <option value='blue'>Roxo</option>
@@ -34,8 +34,8 @@ class InfoBar extends Component {
           <option value='green'>Verde</option>
           <option value='red'>Vermelho</option>
           <option value='white'>Branco</option>
-        </select>
-        <input name='NeonText' maxLength="12" onChange={(e) => this.handleChange(e)}></input>
+        </select> */}
+        <input className='nameInput' name='NeonText' maxLength="12" onChange={(e) => this.handleChange(e)}></input>
         <button type='submit' onClick={() => this.sendToRedux()}>enviar</button>
       </div>
     )
