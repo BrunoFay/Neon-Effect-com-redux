@@ -20,6 +20,10 @@ class InfoBar extends Component {
     dispatch(neonNameAction(NeonText))
 
   }
+  enterButtonLogic=(e)=>{
+    if(e.charCode === 13) return this.sendToRedux() 
+    
+  }
 
   render() {
     
@@ -35,8 +39,8 @@ class InfoBar extends Component {
           <option value='red'>Vermelho</option>
           <option value='white'>Branco</option>
         </select> */}
-        <input className='nameInput' name='NeonText' maxLength="12" onChange={(e) => this.handleChange(e)}></input>
-        <button type='submit' onClick={() => this.sendToRedux()}>enviar</button>
+        <input className='nameInput'onKeyPress={(e)=> this.enterButtonLogic(e)} name='NeonText' maxLength="12" onChange={(e) => this.handleChange(e)}></input>
+        <button type='submit'  onClick={() => this.sendToRedux()}>enviar</button>
       </div>
     )
   }
