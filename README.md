@@ -25,3 +25,7 @@ o objetivo foi praticar o uso dos seguintes consceitos:
 ## Para visualizar um video do projeto, clique na imagem abaixo !
 
 [![Watch the video](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvX7XjW8SbO7M8RFY41EYr8WtFq9QouZ7L5A&usqp=CAU)](https://youtu.be/8k2tX8OZ0tc)
+
+##Para visualizar o projeto funcionando, clique no link abaixo !
+
+https://neoneffectredux.vercel.app/#
